@@ -9,6 +9,82 @@
   </head>
 
   <body>
-    <%= yield %>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">my profile</a></li>
+      <li><a href="#!">my Courses</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">log out</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a href="#!">my profile</a></li>
+      <li><a href="#!">my Courses</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">log out</a></li>
+     </ul>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Kampus-ROR</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Course</a></li>
+          <li><a href="#">Sign-Up</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">YPramudito<i class="material-icons right">arrow_drop_down</i></a></li>
+    
+          
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#">Course</a></li>
+        <li><a href="#">Sign-Up</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">YPramudito<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  </header>  
+    </div>
+    
+  
+  <main>
+    <div class="container">
+    <%= yield %>   
+    </div>
+          
+   
+    
+  </main>
+    
+
+     <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">KAMPUS-ROR</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">google</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright YPramudito
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+       
   </body>
+    <script>
+      $(".button-collapse").sideNav();
+    </script>
 </html>
