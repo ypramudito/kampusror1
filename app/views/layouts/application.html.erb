@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Workspace</title>
+    <title>Kampus ROR</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
- 
- 
-  <body>
-    <ul id="dropdown1" class="dropdown-content">
-      <li><%= link_to "My Profile", edit_user_registration_path %></li>
-      <li><a href="#!">my Courses</a></li>
-      <li class="divider"></li>
-      <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-    </ul>
-    <ul id="dropdown2" class="dropdown-content">
-      <li><a href="#!">my profile</a></li>
-      <li><a href="#!">my Courses</a></li>
-      <li class="divider"></li>
-      <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-     </ul>
-  
-  <%= render "Partial/header" %>
-   
-    
-  
-  <main>
-    <div class="container">
+ <body>
+        <%= render "partial/header" %>
+     <main>
+      <div class="container">
+            <%= render "partial/message" %>
+            <%= yield %>   
+      </div>
       
-      <%= render "Partial/message" %>
-      
-    <%= yield %>   
-    </div>
-         
      </main>
-    
-
-     <%= render "Partial/footer" %>
-     
-  </body>
+         <%= render "partial/footer" %>
+    </body>
     <script>
       $(".button-collapse").sideNav();
     </script>
